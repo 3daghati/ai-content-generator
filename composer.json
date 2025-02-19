@@ -1,0 +1,41 @@
+{
+    "name": "3daghati/ai-content-generator",
+    "description": "Advanced AI-powered content generator for WooCommerce products using DeepSeek AI",
+    "type": "wordpress-plugin",
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "3daghati",
+            "email": "info@email.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "composer/installers": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "squizlabs/php_codesniffer": "^3.7",
+        "wp-coding-standards/wpcs": "^2.3",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "AI_Content_Generator\\": "includes/"
+        },
+        "files": [
+            "ai-content-generator.php"
+        ]
+    },
+    "scripts": {
+        "lint": "phpcs --standard=phpcs.xml",
+        "lint-fix": "phpcbf --standard=phpcs.xml",
+        "test": "phpunit"
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    }
+}
